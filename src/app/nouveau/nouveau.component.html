@@ -1,0 +1,19 @@
+<button (click)="display=!display">Bouton</button>
+<p *ngIf="display">Bonjour</p>
+
+<input type="text" [(ngModel)]="color" />
+<div [ngStyle]="{
+  'width': '200px',
+  'height': '200px',
+  'background-color': color
+}"></div>
+
+<button (click)="square=!square">Bouton</button>
+<div [ngClass]="{
+  bluesquare: square,
+  redsquare: !square
+}"></div>
+<hr>
+<ul>
+  <li *ngFor="let user of users; let i = index">{{ user.nom }} | {{ i }}</li>
+</ul>
